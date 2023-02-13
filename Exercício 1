@@ -1,150 +1,77 @@
- programa
-  {
-    funcao inicio()
-    {
-        cadeia recebe
+Inicio
 
-        escreva("Você está sentado no sofá. Deseja levantar? OBS: Responda com sim ou não. ")
-        leia(recebe)
-        se (recebe == "sim")
-        {
-            escreva("Levantando do sofá...")
-            levantarDoSofa()
-        }
-        senao
-        {
-            inicio()
-        }
-    }
-
-    funcao levantarDoSofa()
-    {
-        cadeia recebe
-        escreva("Você está em pé. Deseja sentar novamente ou ir até o banheiro? ")
-        leia(recebe)
-        se (recebe == "sentar" ou recebe == "sentar novamente")
-        {
-            inicio()
-        }
-        senao
-        {
-            irAoBanheiro()
-        }
-    }
-
-    funcao irAoBanheiro()
-    {
-        cadeia porta
-        cadeia escovar = "nao"
-        cadeia abrirPorta
-
-        escreva("A porta do banheiro está aberta? OBS: Responda com sim ou não. ")
-        leia(porta)
-        se (porta == "sim")
-        {
-            escreva("Entrando no banheiro... Você está dentro do banheiro. ")
-        }
-        senao
-        {
-            enquanto (porta != "sim")
-            {
-                escreva("Deseja abrir a porta do banheiro? ")
-                leia(abrirPorta)
-                se (abrirPorta == "sim" ou abrirPorta == "desejo")
-                {
-                    escreva("Abrindo porta do banheiro... Porta Aberta!")
-                    porta = "sim"
-                    enquanto (escovar != "sim")
-                    {
-                        escreva("Deseja escovar os dentes?")
-                        leia(escovar)
-                    }
-
-                    escovarOsDentes()
-                }
-            }
-        }
-    }
-
-    funcao escovarOsDentes()
-    {
-        cadeia banho
-        escreva("Escovando os dentes... Dentes Escovados! Deseja tomar banho?")
-        leia(banho)
-
-        enquanto (banho != "sim")
-        {
-            escreva("Deseja tomar banho?")
-            leia(banho)
-        }
-
-        se (banho == "sim")
-        {
-            escreva("Tomando banho... Banho tomado!")
-            irQuarto()
-        }
-    }
-
-   funcao irQuarto() {
-    cadeia quarto
-    cadeia porta
-    cadeia abrirPorta
-
-    escreva("Deseja ir para o quarto?")
-    leia(quarto)
-
-    se (quarto == "sim" ou quarto == "desejo") {
-        escreva("Porta do quarto está aberta? ")
-        leia(porta)
-
-        enquanto (porta != "sim") {
-            escreva("Deseja abrir a porta do quarto? ")
-            leia(abrirPorta)
-
-            se (abrirPorta == "sim" ou abrirPorta == "desejo") {
-                escreva("Abrindo porta do quarto... Porta Aberta!")
-                porta = "sim"
-            }
-        }
-        escreva("Entrando no quarto... Você está dentro do quarto!")
-        Dormir()
-    }
-    senao {
-        irQuarto()
-    }
-   }
-
-
-  funcao Dormir() {
-      cadeia deitar = "nao"
-      cadeia dormir
-      cadeia acordar
-
-      enquanto (deitar != "sim") {
-          escreva("Deseja deitar?")
-          leia(deitar)
-      }
-
-      escreva("Você está deitado. Deseja dormir? ")
-      leia(dormir)
-
-      enquanto (dormir != "sim" e dormir != "desejo") {
-          escreva("Você está deitado. Deseja dormir? ")
-          leia(dormir)
-      }
-
-      escreva("Dormindo! ZzzZzzZZzZzZ\nDeseja acordar? ")
-      leia(acordar)
-
-      enquanto (acordar != "sim" e acordar != "desejo") {
-          escreva("Dormindo! ZzzZzzZZzZzZ\nDeseja acordar? ")
-          leia(acordar)
-      }
-
-      Acordar()
-  }
-
-  funcao Acordar() {
-      escreva("ZzzzZzzZZZ\n Acordando...\n Você está acordado! \n")
-  }
-  }
+Levantar do sofá
+Andar até o banheiro
+enquanto (portaBanheiro != aberta) 
+{
+	portaBanheiro = aberta
+}
+se (portaBanheiro == aberta)
+{
+	Colocar a mão na maçaneta
+	Abrir porta do banheiro
+	Entrar no banheiro
+}
+enquanto (luzBanheiro == apagada) 
+{
+	Ir até o interruptor
+	Acender a luz
+	luzBanheiro = acesa
+}
+se (luzBanheiro == acesa)
+{
+	Pegar a escova de dentes
+	Aplicar pasta de dente na escova de dentes
+	Abrir a torneira
+	Molhar a escova de dentes
+	Desligar a torneira
+	enquanto (dentesSujos == verdadeiro e contador < 10)
+	{
+		Movimentar a escova de forma circular e suave
+		contador = contador + 1
+	}	
+	se (contador == 10)
+	{
+		dentesSujos = falso
+	}
+}
+se (dentesSujos == falso)
+{
+	Retirar a roupa
+	Ir para o box
+	Ligar o chuveiro
+	Verificar se a temperatura está adequada
+	se (temperaturaAdequada == verdadeira)
+	{	
+		Fechar porta
+		Desfrutar do banho
+		Para (var tempoBanho = 0; tempoBanho < 20 minutos; tempoBanho = tempoBanho + 1 minuto)
+		{
+			Continuar desfrutando do banho
+		}
+		Sair do box
+		Enxugar-se com uma toalha
+	}
+}
+Apagar luz do banheiro
+luzbanheiro = apagada
+Andar até o quarto	
+se (portaQuarto == fechada)
+{
+	portaQuarto = aberta
+}
+senao
+{
+	Colocar a mão na maçaneta
+	Abrir porta do quarto
+	Entrar no quarto
+	Sentar na cama
+	Deitar na Cama
+	para (var horasSono = 0; horasSono < 8; horasSono = horasSono + 1)
+	{
+		Dormindo! ZzzzzZzzzZZzzzzZzzzZzzzZZzzz	
+	}
+	Abrir os olhos
+	Acordar!
+}
+Fim
