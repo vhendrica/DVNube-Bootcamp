@@ -1,7 +1,7 @@
 Inicio
 
-Levantar do sofá
-Andar até o banheiro
+	Levantar do sofá
+	Andar até o banheiro
 enquanto (portaBanheiro != aberta) 
 {
 	portaBanheiro = aberta
