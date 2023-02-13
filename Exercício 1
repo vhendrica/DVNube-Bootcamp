@@ -1,77 +1,92 @@
 Inicio
 
-	Levantar do sofá
-	Andar até o banheiro
+Levantar do sofá
+Andar até o banheiro
+
 enquanto (portaBanheiro != aberta) 
 {
-	portaBanheiro = aberta
+    portaBanheiro = aberta
 }
+
 se (portaBanheiro == aberta)
 {
-	Colocar a mão na maçaneta
-	Abrir porta do banheiro
-	Entrar no banheiro
+    Colocar a mão na maçaneta
+    Abrir porta do banheiro
+    Entrar no banheiro
 }
+
 enquanto (luzBanheiro == apagada) 
 {
-	Ir até o interruptor
-	Acender a luz
-	luzBanheiro = acesa
+    Ir até o interruptor
+    Acender a luz
+    luzBanheiro = acesa
 }
+
 se (luzBanheiro == acesa)
 {
-	Pegar a escova de dentes
-	Aplicar pasta de dente na escova de dentes
-	Abrir a torneira
-	Molhar a escova de dentes
-	Desligar a torneira
-	enquanto (dentesSujos == verdadeiro e contador < 10)
-	{
-		Movimentar a escova de forma circular e suave
-		contador = contador + 1
-	}	
-	se (contador == 10)
-	{
-		dentesSujos = falso
-	}
+    Pegar a escova de dentes
+    Aplicar pasta de dente na escova de dentes
+    Abrir a torneira
+    Molhar a escova de dentes
+    Desligar a torneira
+    
+    enquanto (dentesSujos == verdadeiro e contador < 10)
+    {
+        Movimentar a escova de forma circular e suave
+        contador = contador + 1
+    }
+    
+    se (contador == 10)
+    {
+        dentesSujos = falso
+    }
 }
+
 se (dentesSujos == falso)
 {
-	Retirar a roupa
-	Ir para o box
-	Ligar o chuveiro
-	Verificar se a temperatura está adequada
-	se (temperaturaAdequada == verdadeira)
-	{	
-		Fechar porta
-		Desfrutar do banho
-		Para (var tempoBanho = 0; tempoBanho < 20 minutos; tempoBanho = tempoBanho + 1 minuto)
-		{
-			Continuar desfrutando do banho
-		}
-		Sair do box
-		Enxugar-se com uma toalha
-	}
+    Retirar a roupa
+    Ir para o box
+    Ligar o chuveiro
+    Verificar se a temperatura está adequada
+    
+    se (temperaturaAdequada == verdadeira)
+    {
+        Fechar porta
+        Desfrutar do banho
+        
+        para (var tempoBanho = 0; tempoBanho < 20 minutos; tempoBanho = tempoBanho + 1 minuto)
+        {
+            Continuar desfrutando do banho
+        }
+        
+        Sair do box
+        Enxugar-se com uma toalha
+    }
 }
+
 Apagar luz do banheiro
 luzbanheiro = apagada
-Andar até o quarto	
+Andar até o quarto
+
 se (portaQuarto == fechada)
 {
-	portaQuarto = aberta
+    portaQuarto = aberta
 }
 senao
 {
-	Colocar a mão na maçaneta
-	Abrir porta do quarto
-	Entrar no quarto
-	Sentar na cama
-	Deitar na Cama
-	para (var horasSono = 0; horasSono < 8; horasSono = horasSono + 1)
-	{
-		Dormindo! ZzzzzZzzzZZzzzzZzzzZzzzZZzzz	
-	}
-	Abrir os olhos
-	Acordar!
+    Colocar a mão na maçaneta
+    Abrir porta do quarto
+    Entrar no quarto
+    Sentar na cama
+    Deitar na Cama
+    
+    para (var horasSono = 0; horasSono < 8; horasSono = horasSono + 1)
+    {
+        Dormindo! ZzzzzZzzzZZzzzzZzzzZzzzZZzzz    
+    }
+    
+    Abrir os olhos
+    Acordar!
 }
+
 Fim
