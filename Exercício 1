@@ -4,36 +4,28 @@ var portaBanheiro = aberta;
 var luzBanheiro = acesa;
 var dentesSujos = verdadeiro;
 var contador = 0;
-var temperaturaAdequada = verdadeiro;
 var portaQuarto = fechada;
 
 Levantar do sofá
 Andar até o banheiro
+Colocar a mão na maçaneta
+Abrir porta do banheiro
+Entrar no banheiro
+Ir até o interruptor
+Acender a luz
+Pegar a escova de dentes
+Aplicar pasta de dente na escova de dentes
+Abrir a torneira
+Molhar a escova de dentes
+Desligar a torneira
 
-se (portaBanheiro == aberta)
+para (var contador = 0; dentesSujos == verdadeiro e contador < 10; contador++)
 {
-    Colocar a mão na maçaneta
-    Abrir porta do banheiro
-    Entrar no banheiro
-    Ir até o interruptor
-    Acender a luz
-}
-
-se (luzBanheiro == acesa)
-{
-    Pegar a escova de dentes
-    Aplicar pasta de dente na escova de dentes
-    Abrir a torneira
-    Molhar a escova de dentes
-    Desligar a torneira
-
-    enquanto (dentesSujos == verdadeiro e contador < 10)
-    {
         Movimentar a escova de forma circular e suave
-        contador = contador + 1
-    }
-
-    dentesSujos = falso;
+            se (contador >= 10) 
+            {
+                dentesSujos = falso;
+            }
 }
 
 Retirar a roupa
