@@ -1,9 +1,11 @@
 Inicio
 
+var portaBanheiro = fechada; var luzBanheiro = apagada; var dentesSujos = verdadeiro; var contador = 0; var temperaturaAdequada = verdadeiro; var portaQuarto = fechada;
+
 Levantar do sofá
 Andar até o banheiro
 
-enquanto (portaBanheiro != aberta) 
+se (portaBanheiro != aberta) 
 {
     portaBanheiro = aberta
 }
@@ -15,11 +17,10 @@ se (portaBanheiro == aberta)
     Entrar no banheiro
 }
 
-enquanto (luzBanheiro == apagada) 
+se (luzBanheiro == apagada) 
 {
     Ir até o interruptor
     Acender a luz
-    luzBanheiro = acesa
 }
 
 se (luzBanheiro == acesa)
@@ -35,11 +36,7 @@ se (luzBanheiro == acesa)
         Movimentar a escova de forma circular e suave
         contador = contador + 1
     }
-    
-    se (contador == 10)
-    {
-        dentesSujos = falso
-    }
+   
 }
 
 se (dentesSujos == falso)
@@ -60,22 +57,22 @@ se (dentesSujos == falso)
         }
         
         Sair do box
-        Enxugar-se com uma toalha
+	Pegar toalha do gancho
+        Enxugar-se com a toalha
+	Colocar toalha de volta no gancho
     }
 }
 
 Apagar luz do banheiro
-luzbanheiro = apagada
 Andar até o quarto
 
 se (portaQuarto == fechada)
 {
-    portaQuarto = aberta
-}
-senao
-{
     Colocar a mão na maçaneta
     Abrir porta do quarto
+}
+se (portaQuarto == aberta)
+{
     Entrar no quarto
     Sentar na cama
     Deitar na Cama
