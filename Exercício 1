@@ -1,0 +1,66 @@
+Inicio
+
+var portaBanheiro = aberta;
+var luzBanheiro = acesa;
+var dentesSujos = verdadeiro;
+var contador = 0;
+var portaQuarto = fechada;
+
+Levantar do sofá
+Andar até o banheiro
+Colocar a mão na maçaneta
+Abrir porta do banheiro
+Entrar no banheiro
+Ir até o interruptor
+Acender a luz
+Pegar a escova de dentes
+Aplicar pasta de dente na escova de dentes
+Abrir a torneira
+Molhar a escova de dentes
+Desligar a torneira
+
+para (var contador = 0; dentesSujos == verdadeiro e contador < 10; contador++)
+{
+        Movimentar a escova de forma circular e suave
+            se (contador >= 10) 
+            {
+                dentesSujos = falso;
+            }
+}
+
+Retirar a roupa
+Ir para o box
+Ligar o chuveiro
+Desfrutar do banho
+
+para (var tempoBanho = 0; tempoBanho < 20 minutos; tempoBanho = tempoBanho + 1 minuto)
+{
+    Continuar desfrutando do banho
+}
+
+Sair do box
+Pegar toalha do gancho
+Enxugar-se com a toalha
+Colocar toalha de volta no gancho
+Apagar luz do banheiro
+Andar até o quarto
+
+se (portaQuarto == fechada)
+{
+    Colocar a mão na maçaneta
+    Abrir porta do quarto
+}
+
+Entrar no quarto
+Sentar na cama
+Deitar na Cama
+
+para (var horasSono = 0; horasSono < 8; horasSono = horasSono + 1)
+{
+    Dormindo! ZzzzzZzzzZZzzzzZzzzZzzzZZzzz    
+}
+
+Abrir os olhos
+Acordar!
+
+Fim
