@@ -2,35 +2,31 @@ Inicio
 
 Escreva("Digite um número);
 leia(n);
-se (n > 0)
+Fibonacci(n);
+
+funcao Inteiro Fibonacci(Inteiro n)
 {
-  Fibonacci(n);
-}
-senao
-{
-  Escreva("O número precisa ser positivo");
-}
-
-
-
-funcao Fibonacci(Inteiro n)
-{
-  se (n == 1)
-  {
-      retorne 0;
-  }
-  senao
-  {
-      se (n == 2)
-      {
-      retorne 1;
-      }
-
-      senao
-      {
-      retorne fibonacci(n-1) + fibonacci(n-2);
-      }
-   }
+	se (n < 0)
+	{
+		Escreva("Insira um valor positivo");
+		retorne -1;
+	}
+	se (n == 0)
+	{
+		retorne 0;
+	}
+	else
+	{
+		se (n == 1)
+		{
+		retorne 1;
+		}
+		
+		else
+		{
+		retorne Fibonacci(n-1) + Fibonacci(n-2);
+		}
+	}
 }
 
 Fim
