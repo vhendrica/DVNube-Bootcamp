@@ -1,5 +1,4 @@
-public class Fibonacci
-{
+public class Fibonacci {
     public static Integer recursao(Integer n) 
     {
         if (n < 0)
@@ -8,14 +7,14 @@ public class Fibonacci
            return -1;
         }
         
-        if (n == 1)
+        if (n == 0)
         {
             return 0;
         }
         
         else
         {
-            if (n == 2)
+            if (n == 1)
             {
                 return 1;
             }
