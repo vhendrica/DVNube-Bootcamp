@@ -15,8 +15,8 @@ senao
 
 funcao Fibonacci(Inteiro n)
 {
-	se (n == 1)
-	{
+  se (n == 1)
+  {
       retorne 0;
   }
   senao
@@ -30,7 +30,7 @@ funcao Fibonacci(Inteiro n)
       {
       retorne fibonacci(n-1) + fibonacci(n-2);
       }
-	 }
+   }
 }
 
 Fim
