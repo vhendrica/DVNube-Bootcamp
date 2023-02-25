@@ -9,7 +9,7 @@ funcao Inteiro Fibonacci(Inteiro n)
 	se (n < 0)
 	{
 		Escreva("Insira um valor positivo");
-		retorne -1;
+		retorne nulo;
 	}
 	se (n == 0)
 	{
