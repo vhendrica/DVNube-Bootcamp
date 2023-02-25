@@ -1,8 +1,15 @@
 Inicio
 
+Inteiro n = 0;
+Inteiro fibo = nulo;
+
 Escreva("Digite um número);
 leia(n);
-Fibonacci(n);
+enquanto (fibo == nulo)
+{
+	fibo = Fibonacci(n);
+}
+Escreva("fibonacci(" + n + ") = " + fibo);
 
 funcao Inteiro Fibonacci(Inteiro n)
 {
@@ -15,16 +22,16 @@ funcao Inteiro Fibonacci(Inteiro n)
 	{
 		retorne 0;
 	}
-	else
+	senão
 	{
 		se (n == 1)
 		{
-		retorne 1;
+			retorne 1;
 		}
 		
-		else
+		senão
 		{
-		retorne Fibonacci(n-1) + Fibonacci(n-2);
+			retorne Fibonacci(n-1) + Fibonacci(n-2);
 		}
 	}
 }
