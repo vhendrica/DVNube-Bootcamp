@@ -4,7 +4,7 @@ public class Fibonacci {
         if (n < 0)
         {
            System.debug('Insira um valor positivo');
-           return -1;
+           return null;
         }
         
         if (n == 0)
