@@ -1,0 +1,39 @@
+Inicio
+
+Inteiro n = 0;
+Inteiro fibo = nulo;
+
+Escreva("Digite um número);
+enquanto (fibo == nulo)
+{
+	leia(n);
+	fibo = Fibonacci(n);
+}
+Escreva("fibonacci(" + n + ") = " + fibo);
+
+funcao Inteiro Fibonacci(Inteiro n)
+{
+	se (n < 0)
+	{
+		Escreva("Insira um valor positivo");
+		retorne nulo;
+	}
+	se (n == 0)
+	{
+		retorne 0;
+	}
+	senão
+	{
+		se (n == 1)
+		{
+			retorne 1;
+		}
+		
+		senão
+		{
+			retorne Fibonacci(n-1) + Fibonacci(n-2);
+		}
+	}
+}
+
+Fim
