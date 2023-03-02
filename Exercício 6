@@ -1,30 +1,29 @@
-public class Fibonacci {
+public class Fibonacci 
+{
     public static Integer recursao(Integer n) 
     {
         if (n < 0)
         {
-           System.debug('Insira um valor positivo');
-           return null;
+            System.debug('Por favor, insira um número maior ou igual a zero.');
+            return null;
         }
         
-        if (n == 0)
+        else if (n == 0)
         {
             return 0;
         }
         
-        else
+        else if (n == 1)
         {
-            if (n == 1)
-            {
-                return 1;
-            }
-            
-            else 
-            {
-                return recursao(n - 1) + recursao(n - 2);
-            }
+            return 1;
         }
-	}
+        
+        else 
+        {
+            return recursao(n - 1) + recursao(n - 2);
+        }
+        
+    }
 }
 
 // Anonymous Apex Code: System.debug(Fibonacci.recursao(20));
