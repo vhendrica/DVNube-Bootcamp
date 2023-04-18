@@ -1,0 +1,58 @@
+public with sharing class Contacts {
+    public static List<Contact> createMembers(String firstName, String lastName) {
+        List<Contact> members = new List<Contact>();
+        List<String> families = getFamilies(lastName);
+        List<Account> accounts = [SELECT Id, Name FROM Account WHERE Name IN :families];
+        
+        Set<String> accountNames = new Set<String>();
+        for (Account account : accounts) {
+            accountNames.add(account.Name);
+        }
+        
+        List<Account> newAccounts = new List<Account>();
+        for (String familyName : families) {
+            if (!accountNames.contains(familyName)) {
+                Account newAccount = new Account(Name = familyName);
+                newAccounts.add(newAccount);
+            }
+        }
+        
+        if (!newAccounts.isEmpty()) {
+            insert newAccounts;
+            accounts.addAll(newAccounts);
+        }
+        
+        for (Account account : accounts) {
+            String currentLastName = (lastName == account.Name) ? lastName : account.Name;
+            Contact member = new Contact(FirstName = firstName, LastName = currentLastName, AccountId = account.Id);
+            members.add(member);
+        }
+        
+        return members;
+    }
+    
+    public static List<String> getFamilies(String lastName) {
+        List<String> families = new List<String>();
+        List<String> lastNames = lastName.split(' ');
+        
+        Integer lastNamesQuantity = lastNames.size();
+        for (Integer i = 0; i < lastNamesQuantity; i++) {
+            families.addAll(buildLastNames(lastNames, lastNamesQuantity, i));
+        }
+        
+        return families;
+    }
+    
+    private static List<String> buildLastNames(List<String> lastNames, Integer lastNamesQuantity, Integer startingIndex) {
+        List<String> lastNameTemp = new List<String>();
+        String currentLastName = '';
+        for (Integer j = startingIndex; j < lastNamesQuantity; j++) {
+            if (j > startingIndex) {
+                currentLastName += ' ';
+            }
+            currentLastName += lastNames[j];
+            lastNameTemp.add(currentLastName);
+        }
+        return lastNameTemp;
+    }
+}
