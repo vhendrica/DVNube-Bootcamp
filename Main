@@ -5,18 +5,19 @@ public with sharing class Main {
         asserts();
     }
     
-    private static void generateFamilies() {
-        Account silva = new Account(Name= 'Silva');
-        Account souza = new Account(Name = 'Souza');
-        Account souzaSilva = new Account(Name = 'Souza Silva');
-        insert new List<Account>{ silva, souza, souzaSilva };
-            
-            List<Contact> members = new List<Contact>();
-        members.addAll(Contacts.createMembers('Ana', 'Souza', souza.Id));
-        members.addAll(Contacts.createMembers('Maria', 'Silva', silva.Id));
-        members.addAll(Contacts.createMembers('Ana Maria', 'Souza Silva', souzaSilva.Id));        
+   private static void generateFamilies() {
+    Account silva = new Account(Name= 'Silva');
+    Account souza = new Account(Name = 'Souza');
+    Account souzaSilva = new Account(Name = 'Souza Silva');
+    insert new List<Account>{ silva, souza, souzaSilva };
         
-    }
+    List<Contact> members = new List<Contact>();
+    members.addAll(Contacts.createMembers('Ana', 'Souza'));
+    members.addAll(Contacts.createMembers('Maria', 'Silva'));
+    members.addAll(Contacts.createMembers('Ana Maria', 'Souza Silva'));        
+    insert members;
+}
+
     
     
     /**
